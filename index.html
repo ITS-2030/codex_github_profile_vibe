@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="개발 프로젝트와 문제 해결 과정을 소개하는 개발자 포트폴리오입니다.">
+  <meta name="theme-color" content="#101014">
+  <title>dev.log | 개발자 포트폴리오</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="dev.log 홈">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>dev<span class="brand-dot">.</span>log</span>
+      </a>
+      <nav aria-label="주 메뉴">
+        <a href="#projects">프로젝트</a>
+        <a href="#about">소개</a>
+        <a href="#contact">연락처</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="container hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">DEVELOPER PORTFOLIO</p>
+        <h1 id="hero-title">복잡한 문제를,<br><strong>간결한 제품으로.</strong></h1>
+        <p class="hero-description">문제를 작은 단위로 나누고, 쓰기 편한 웹 서비스를 만듭니다.<br class="wide-only"> 프로젝트에서 구현 과정과 기술 선택을 살펴보세요.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#projects">프로젝트 보기</a>
+          <a class="button button-secondary" href="#about">개발자 소개</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="./assets/code-emblem.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+      </div>
+    </section>
+
+    <section id="projects" class="section container" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="projects-title" lang="en">Projects</h2>
+          <p>작업을 소개하는 방식을 보여주는 예시 프로젝트입니다.</p>
+        </div>
+        <div class="filters" role="group" aria-label="프로젝트 유형" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">전체</button>
+          <button type="button" data-filter="web" aria-pressed="false">웹 서비스</button>
+          <button type="button" data-filter="tools" aria-pressed="false">개발 도구</button>
+        </div>
+      </div>
+      <p id="filter-status" class="visually-hidden" role="status"></p>
+
+      <div class="project-grid">
+        <article class="project-card" data-category="web">
+          <div class="project-visual visual-board" aria-hidden="true">
+            <div class="preview board-preview" lang="en">
+              <div class="preview-bar"><i></i><i></i><i></i><span>Focusboard</span></div>
+              <div class="board-content">
+                <b>Sprint board</b>
+                <div class="board-columns">
+                  <div><span>To do</span><i></i><i></i></div>
+                  <div><span>In progress</span><i></i><i></i></div>
+                  <div><span>Done</span><i></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-category">웹 서비스</p>
+            <h3 lang="en">Focusboard</h3>
+            <p class="project-summary">할 일과 진행 상태를 한눈에 보는 칸반 보드</p>
+            <ul class="tags" aria-label="예시 기술 스택"><li>React</li><li>TypeScript</li></ul>
+            <button type="button" class="detail-link" data-dialog="focusboard" aria-label="Focusboard 자세히 보기" hidden>자세히 보기</button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tools">
+          <div class="project-visual visual-code" aria-hidden="true">
+            <div class="preview code-preview" lang="en">
+              <div class="preview-bar"><i></i><i></i><i></i><span>Snippet Kit</span></div>
+              <div class="code-content">
+                <span><em>const</em> snippet = {</span>
+                <span>&nbsp; name: <b>'useDebounce'</b>,</span>
+                <span>&nbsp; language: <b>'typescript'</b>,</span>
+                <span>&nbsp; tags: [<b>'hooks'</b>, <b>'react'</b>]</span>
+                <span>};</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-category">개발 도구</p>
+            <h3 lang="en">Snippet Kit</h3>
+            <p class="project-summary">자주 쓰는 코드 조각을 태그로 정리하고 찾는 도구</p>
+            <ul class="tags" aria-label="예시 기술 스택"><li>JavaScript</li><li>IndexedDB</li></ul>
+            <button type="button" class="detail-link" data-dialog="snippet-kit" aria-label="Snippet Kit 자세히 보기" hidden>자세히 보기</button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tools">
+          <div class="project-visual visual-monitor" aria-hidden="true">
+            <div class="preview monitor-preview" lang="en">
+              <div class="preview-bar"><i></i><i></i><i></i><span>API Monitor</span></div>
+              <div class="monitor-content">
+                <span>Response time</span>
+                <b>124 <small>ms</small></b>
+                <div class="monitor-bars">
+                  <i style="--size: 40%"></i><i style="--size: 55%"></i><i style="--size: 44%"></i>
+                  <i style="--size: 70%"></i><i style="--size: 60%"></i><i style="--size: 82%"></i>
+                  <i style="--size: 62%"></i><i style="--size: 72%"></i><i style="--size: 54%"></i>
+                  <i style="--size: 78%"></i><i style="--size: 65%"></i><i style="--size: 90%"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-category">개발 도구</p>
+            <h3 lang="en">API Monitor</h3>
+            <p class="project-summary">API 응답 속도와 실패 이력을 추적하는 대시보드</p>
+            <ul class="tags" aria-label="예시 기술 스택"><li>Node.js</li><li>SQLite</li></ul>
+            <button type="button" class="detail-link" data-dialog="api-monitor" aria-label="API Monitor 자세히 보기" hidden>자세히 보기</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section container" aria-labelledby="about-title">
+      <div class="about-layout">
+        <div class="section-heading">
+          <div><h2 id="about-title" lang="en">About</h2><p>개발할 때 중요하게 생각하는 것</p></div>
+        </div>
+        <div class="about-content">
+          <h3>사용자가 끝내야 할 일에서 출발합니다.</h3>
+          <p>먼저 사용자가 어느 단계에서 막히는지 살핍니다. 화면을 만든 뒤에는 키보드만으로 주요 기능을 사용할 수 있는지, 데이터가 없거나 요청이 실패했을 때도 다음 행동을 찾을 수 있는지 확인합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container" aria-labelledby="contact-title" data-email="" data-github="">
+      <div class="contact-panel">
+        <div class="section-heading">
+          <div>
+            <h2 id="contact-title" lang="en">Contact</h2>
+            <p data-contact-placeholder>연락처는 공개 준비 중입니다.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="button button-primary" data-email-link hidden>이메일 보내기</a>
+          <a class="button button-secondary" data-github-link hidden>GitHub 프로필</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <span lang="en">dev.log</span>
+    <a href="#top">맨 위로</a>
+  </footer>
+
+  <dialog id="focusboard" aria-labelledby="focusboard-title">
+    <form method="dialog" class="dialog-close"><button type="submit" autofocus>닫기</button></form>
+    <p class="project-category">웹 서비스 · 예시 프로젝트</p>
+    <h2 id="focusboard-title" lang="en">Focusboard</h2>
+    <dl>
+      <dt>문제</dt><dd>할 일이 여러 채널에 흩어져 있으면 작업의 진행 상태와 다음 할 일을 파악하기 어렵습니다.</dd>
+      <dt>구현 예시</dt><dd>카드를 상태별로 나누고, 상세 화면에서도 상태를 바꿀 수 있게 구성합니다. 카드와 열의 순서는 별도로 관리해 이동한 카드를 정확한 위치에 저장합니다.</dd>
+      <dt>기술 선택</dt><dd>React로 보드와 카드의 표시를 나누고, TypeScript로 카드 상태와 변경에 필요한 값을 정의합니다.</dd>
+    </dl>
+  </dialog>
+
+  <dialog id="snippet-kit" aria-labelledby="snippet-kit-title">
+    <form method="dialog" class="dialog-close"><button type="submit" autofocus>닫기</button></form>
+    <p class="project-category">개발 도구 · 예시 프로젝트</p>
+    <h2 id="snippet-kit-title" lang="en">Snippet Kit</h2>
+    <dl>
+      <dt>문제</dt><dd>전에 작성한 코드를 다시 쓰려면 여러 저장소와 메모에서 이름이나 용도를 찾아야 합니다.</dd>
+      <dt>구현 예시</dt><dd>코드에 언어와 태그를 지정하고 제목과 본문을 검색할 수 있게 합니다. 검색 결과에서 필요한 코드 조각을 바로 복사합니다.</dd>
+      <dt>기술 선택</dt><dd>IndexedDB에 코드를 저장해 브라우저를 다시 열거나 네트워크에 연결되어 있지 않아도 사용할 수 있게 합니다.</dd>
+    </dl>
+  </dialog>
+
+  <dialog id="api-monitor" aria-labelledby="api-monitor-title">
+    <form method="dialog" class="dialog-close"><button type="submit" autofocus>닫기</button></form>
+    <p class="project-category">개발 도구 · 예시 프로젝트</p>
+    <h2 id="api-monitor-title" lang="en">API Monitor</h2>
+    <dl>
+      <dt>문제</dt><dd>API의 현재 상태를 확인해도 응답이 언제 느려졌는지, 실패가 반복됐는지 알기 어렵습니다.</dd>
+      <dt>구현 예시</dt><dd>응답 코드와 지연 시간을 주기적으로 기록합니다. 최근 응답 시간과 오류가 발생한 시점을 함께 표시해 변화를 추적합니다.</dd>
+      <dt>기술 선택</dt><dd>Node.js에서 상태 확인 요청을 보내고, SQLite에 기록을 쌓아 기간과 엔드포인트별로 조회합니다.</dd>
+    </dl>
+  </dialog>
+</body>
+</html>
